@@ -27,7 +27,7 @@ Series.prototype.drawDataLabels = function () {
 		dataLabelsGroup = series.plotGroup(
 			'dataLabelsGroup',
 			'data-labels',
-			defer && !hasRendered ? 'hidden' : 'visible', // #5133
+			defer && !hasRendered ? 'hidden' : 'inherit', // #5133
 			options.zIndex || 6
 		);
 
@@ -36,7 +36,7 @@ Series.prototype.drawDataLabels = function () {
 			if (!hasRendered) {
 				addEvent(series, 'afterAnimate', function () {
 					if (series.visible) { // #3023, #3024
-						dataLabelsGroup.show();
+						dataLabelsGroup.show(true);
 					}
 					dataLabelsGroup[seriesOptions.animation ? 'animate' : 'attr']({ opacity: 1 }, { duration: 200 });
 				});

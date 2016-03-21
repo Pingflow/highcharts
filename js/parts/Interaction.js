@@ -754,7 +754,7 @@ extend(Series.prototype, {
 		// show or hide elements
 		each(['group', 'dataLabelsGroup', 'markerGroup', 'tracker'], function (key) {
 			if (series[key]) {
-				series[key][showOrHide]();
+				series[key][showOrHide](true);
 			}
 		});
 

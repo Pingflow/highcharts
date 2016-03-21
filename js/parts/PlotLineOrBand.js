@@ -169,7 +169,7 @@ Highcharts.PlotLineOrBand.prototype = {
 			width: arrayMax(xs) - x,
 			height: arrayMax(ys) - y
 		});
-		label.show();
+		label.show(true);
 	},
 
 	/**

@@ -368,7 +368,7 @@ Tooltip.prototype = {
 			// show it
 			if (tooltip.isHidden) {
 				stop(label);
-				label.attr('opacity', 1).show();
+				label.attr('opacity', 1).show(true);
 			}
 
 			// update text
